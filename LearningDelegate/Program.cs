@@ -19,7 +19,11 @@ namespace LearningDelegate
             Warrior warrior = new Warrior("Ork warrior", 120);
             Mage mage = new Mage("Skellet Mage", 65);
 
-            mage.Decay(warrior);
+            mage.ApplyDecayOnTarget(warrior);
+            warrior.EndOfMove();
+            warrior.EndOfMove();
+            warrior.EndOfMove();
+            warrior.EndOfMove();
             warrior.EndOfMove();
         }
     }
