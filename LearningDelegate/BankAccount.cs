@@ -33,7 +33,6 @@
             {
                 Remiander -= amount;
                 BankAccountHandler?.Invoke($"Со счета {this.Name} снято {amount}$");
-                CurrentRemiander();
             }
             else
             {
