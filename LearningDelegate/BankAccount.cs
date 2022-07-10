@@ -30,10 +30,18 @@
         public void Withdraw(decimal amount)
         {
             if (Remiander > amount)
+            {
                 Remiander -= amount;
+                BankAccountHandler?.Invoke($"Со счета {this.Name} снято {amount}$");
+                CurrentRemiander();
+            }
+            else
+            {
+                BankAccountHandler?.Invoke($"Недостаточно средств на счету");
+                CurrentRemiander();
+            }
 
-            BankAccountHandler?.Invoke($"Со счета {this.Name} снято {amount}$");
-            CurrentRemiander();
+
         }
 
         private void CurrentRemiander()

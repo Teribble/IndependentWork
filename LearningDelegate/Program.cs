@@ -14,6 +14,7 @@ namespace LearningDelegate
             acc.RegisterDelegate(Print);
             acc.TopUpAccount(34567);
             acc.Withdraw(18000);
+            acc.Withdraw(18000);
         }
     }
 }
